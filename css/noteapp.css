@@ -1,12 +1,16 @@
 #title {
   color: #008080;
   text-align: center;
-  background-color: #FAF0E6;
+  background-color: #FFD700;
+  padding: 15px 0px;
+  font-size: 20px;
 }
 
 #create-a-new-note {
   float: right;
   font-family:monospace;
+  font-size: 45px;
+  padding: 5px;
 }
 
 #write-a-note {

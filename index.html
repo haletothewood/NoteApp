@@ -5,24 +5,24 @@
     <title>Notes App</title>
     <meta name="description" content="Lets us create a note in an SPA">
     <link rel="stylesheet" href="css/noteapp.css">
-    <script src="/models/note.js"></script>
+    <script src="models/note.js"></script>
 
   </head>
   <body>
     <header>
       <div id="title">
       <h1>Makers Notes App</h1>
-      <button id="create-a-new-note" type="button">Create a new note</button>
+      <button id="create-a-new-note" type="button">+</button>
       </div>
     </header>
 
     <section id="write-a-note">
-      <form id="" style="display:block">
-        <textarea rows="4" cols="50" placeholder="Enter text here"></textarea>
-        <button id="save-note" type="button">Save note</button>
+      <form id="form-for-note" style="display: none">
+        <textarea rows="4" cols="50" placeholder="Enter note"></textarea>
+        <button id="save-note" type="button">SAVE</button>
       </form>
 
     </section>
-
+    <script src="models/app.js"></script>
 
   </body>
