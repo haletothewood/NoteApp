@@ -1,4 +1,4 @@
-"use strict"; 
+"use strict";
 
 (function(exports) {
   function Note(text) {
@@ -10,4 +10,4 @@
   }
 
   exports.Note = Note;
-}(this));
+})(this);
