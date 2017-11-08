@@ -5,7 +5,7 @@
     var _note = note;
 
     function showNote () {
-      return "<div id='single-note'>" + _note.showText + "</div>";
+      return "<div id='single-note'>" + _note.showText() + "</div>";
     };
     return { showNote: showNote }
   };
