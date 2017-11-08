@@ -1,19 +1,21 @@
 "use strict";
 
 (function(exports) {
-  function NoteList() {
-    this._notes = [];
-  }
+  exports.NoteList = function() {
+    var _notes = [];
 
-  NoteList.prototype.allNotes = function() {
-    return this._notes;
+    allNotes = function() {
+      return _notes;
+    };
+
+    addNote = function(text) {
+      // var note = new Note(text);
+      _notes.push(text);
+      return _notes.last;
+    };
+    return { allNotes: allNotes, addNote: addNote };
   };
 
-  NoteList.prototype.addNote = function(text) {
-    var note = new Note(text);
-    this._notes.push(note);
-    return this._notes.last;
-  };
-
-  exports.NoteList = NoteList;
-})(this);
+  })(this);
+  
+noteList = new NoteList;
