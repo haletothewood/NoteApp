@@ -6,13 +6,13 @@ var beforeEach = function () {
 };
 
 var noteList = beforeEach();
-expect("Is created with an empty array", assert.isArray(noteList.allNotes()));
+wish(noteList.allNotes()).isArray();
+
 
 var text = "This is a note!"
 noteList.addNote(text);
-expect("It can store notes", assert.isInstanceOf(Note, noteList.allNotes()[0]));
+wish(noteList.allNotes()[0]).isInstanceOf(Note);
 
-var note = "This is a note!"
 var noteList = beforeEach();
 noteList.addNote(note)
-expect("It returns all of the notes", assert.isEqual(1, noteList.allNotes().length));
+wish(noteList.allNotes().length).isEqualTo(1);

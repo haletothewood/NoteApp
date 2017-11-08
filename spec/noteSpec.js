@@ -6,4 +6,4 @@ var beforeEach = function () {
 };
 
 var note = beforeEach();
-expect("Note should be created with some note text", assert.isEqual("This is a note!", note.showText()))
+wish(note.showText()).isEqualTo("This is a note!")
