@@ -11,6 +11,10 @@ var init = function (){
     console.log(form);
   });
 
+  saveNote.addEventListener('click', function () {
+    form.style.display = "none";
+  });
+
 };
 
 return {
