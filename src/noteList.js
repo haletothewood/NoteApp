@@ -10,7 +10,7 @@
   };
 
   NoteList.prototype.addNote = function(text) {
-    note = new Note(text);
+    var note = new Note(text);
     this._notes.push(note);
     return this._notes.last;
   };
