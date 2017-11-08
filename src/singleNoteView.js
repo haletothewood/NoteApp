@@ -1,8 +1,12 @@
 "use strict";
 
 (function(exports) {
-  function SingleNoteView () {
+  exports.SingleNoteView = function (note) {
+    var _note = note;
 
-  }
-  exports.SingleNoteView = SingleNoteView;
+    function showNote () {
+      return "<div id='single-note'>" + _note.showText + "</div>";
+    };
+    return { showNote: showNote }
+  };
 })(this);
