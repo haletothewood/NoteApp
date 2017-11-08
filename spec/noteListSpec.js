@@ -1,6 +1,6 @@
 "use strict";
 
-describe("Note List", function() {
+aWholeNewWorld("Note List", function() {
 
   it("is created with no notes", function() {
     var noteList = new NoteList();
