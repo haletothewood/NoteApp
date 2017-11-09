@@ -5,7 +5,6 @@
     <title>Notes App</title>
     <meta name="description" content="Lets us create a note in an SPA">
     <link rel="stylesheet" href="css/noteapp.css">
-    <script src="models/note.js"></script>
 
   </head>
   <body>
@@ -18,12 +17,14 @@
 
     <section id="write-a-note">
       <form id="form-for-note" style="display: none">
-        <textarea rows="4" cols="50" placeholder="Enter note"></textarea>
-        <button id="save-note" type="button">SAVE</button>
+        <textarea id="text-for-note" rows="4" cols="50" placeholder="Enter note"></textarea>
+        <input id="save-note" type="submit" value="SAVE">
       </form>
 
     </section>
+    <script src="src/note.js"></script>
+    <script src="src/noteList.js"></script>
+    <script src="src/singleNoteView.js"></script>
     <script src="models/app.js"></script>
-
 
   </body>
