@@ -8,6 +8,11 @@
       return _text;
     };
 
-    return { showText: showText };
+    function previewText() {
+      return _text.slice( 0, 20);
+    }
+
+    return { showText: showText,
+              previewText: previewText };
   };
 })(this);
