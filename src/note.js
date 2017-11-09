@@ -1,13 +1,13 @@
 "use strict";
 
 (function(exports) {
-  function Note(text) {
-    this._text = text;
-  }
+  exports.Note = function(text) {
+    var _text = text;
 
-  Note.prototype.showText = function () {
-    return this._text;
-  }
+    function showText() {
+      return _text;
+    };
 
-  exports.Note = Note;
+    return { showText: showText };
+  };
 })(this);
