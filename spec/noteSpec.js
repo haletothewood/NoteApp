@@ -6,8 +6,8 @@ aWholeNewWorld("Note", function() {
     wish(note.showText()).toEqual("This is a note!")
   })
 
-  it('can return an abbreviated text a string of 20 characters', function () {
+  it('can return a 20 character abbreviated version of text as html', function () {
     var note = new Note("This is a note! This note is more than 20 characters long!");
-    wish(note.previewText()).toEqual("This is a note! This")
+    wish(note.previewText()).toEqual("<div>This is a note! This</div>")
   })
 })
