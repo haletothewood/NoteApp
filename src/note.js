@@ -9,10 +9,14 @@
     };
 
     function previewText() {
-      return _text.slice(0, 20);
+      if (_text.length <= 20) {
+        return _text
+      } else {
+        return _text.slice(0, 20) + "...";
+      }
     }
 
     return { showText: showText,
               previewText: previewText };
-  };
+    };
 })(this);
