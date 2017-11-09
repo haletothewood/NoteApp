@@ -28,8 +28,19 @@ var control = (function() {
       var text = document.getElementById("text-for-note").value;
       noteList.addNote(text);
       document.getElementById("text-for-note").value = "";
+      showAbbreviatedNote();
     });
+  };
 
+  function showAbbreviatedNote() {
+    var node = document.createElement('div');
+    var textnode = document.createTextNode(_textOfLastNoteInList());
+    node.appendChild(textnode);
+    document.body.appendChild(node)
+  };
+
+  function _textOfLastNoteInList() {
+    return noteList.allNotes()[noteList.allNotes().length -1].previewText();
   };
 
   return {

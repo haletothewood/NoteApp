@@ -9,8 +9,7 @@
     };
 
     function previewText() {
-      var textAbbrev = _text.slice( 0, 20);
-      return "<div>" + textAbbrev + "</div>"
+      return _text.slice(0, 20);
     }
 
     return { showText: showText,
