@@ -1,3 +1,7 @@
+var noteList = new NoteList();
+console.log(noteList);
+
+
 var control = (function() {
 
   var createANoteButton = document.getElementById("create-a-new-note");
@@ -5,21 +9,32 @@ var control = (function() {
   var submitMemo = document.getElementById("write-a-note");
   var form = document.getElementById("form-for-note");
 
-var init = function (){
-  createANoteButton.addEventListener("click", function(){
-    form.style.display = "block";
-    console.log(form);
-  });
+  var init = function (){
+    createEventListeners();
+    getNoteText();
+  };
 
-  saveNote.addEventListener('click', function () {
-    form.style.display = "none";
-  });
+  function createEventListeners() {
+    createANoteButton.addEventListener("click", function(){
+      form.style.display = "block";
+    });
 
-};
+  }
 
-return {
-  init: init
-};
+  function getNoteText() {
+    saveNote.addEventListener('click', function () {
+      event.preventDefault();
+      form.style.display = "none";
+      var text = document.getElementById("text-for-note").value;
+      noteList.addNote(text);
+      document.getElementById("text-for-note").value = "";
+    });
+
+  };
+
+  return {
+    init: init
+  };
 
 }());
 control.init();
