@@ -1,7 +1,7 @@
 var noteList = new NoteList();
 
 
-var control = (function() {
+var control = (function () {
 
   var createANoteButton = document.getElementById("create-a-new-note");
   var saveNote = document.getElementById("save-note");
@@ -10,8 +10,8 @@ var control = (function() {
   var noteItem = document.getElementsByTagName("li");
   var textArea = document.getElementById("text-for-note");
 
-  var init = function (){
-    createEventListeners();
+  var init = function () {
+    addANewNote();
     getNoteText();
   };
 
@@ -20,15 +20,15 @@ var control = (function() {
     var itemsArray = Array.prototype.slice.call(items);
 
     itemsArray.map((item, index) => {
-      item.addEventListener("click", function() {
+      item.addEventListener("click", function () {
         form.style.display = "block";
         textArea.value = noteList.allNotes()[index].showText();
       })
     });
   };
 
-  function createEventListeners() {
-    createANoteButton.addEventListener("click", function(){
+  function addANewNote() {
+    createANoteButton.addEventListener("click", function () {
       form.style.display = "block";
     });
 
