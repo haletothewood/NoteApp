@@ -18,8 +18,6 @@ var control = (function() {
   function getNoteLinks() {
     var items = document.getElementsByTagName("li");
     var itemsArray = Array.prototype.slice.call(items);
-    console.log(items);
-    console.log(itemsArray);
 
     itemsArray.map((item, index) => {
       item.addEventListener("click", function() {
