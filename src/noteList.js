@@ -15,5 +15,17 @@
     return this._notes.last;
   };
 
+  NoteList.prototype.getAbbreviatedTextOfNotes = function() {
+    var output = "";
+    this.allNotes().map((note, index) => {
+      output+="<div id='" + index + "'>" + note.previewText() + "</div>";
+    })
+    return output;
+  }
+
+  NoteList.prototype.textOfLastNoteInList = function() {
+    return noteList.allNotes()[noteList.allNotes().length - 1].previewText();
+  };
+
   exports.NoteList = NoteList;
 })(this);

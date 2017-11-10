@@ -34,14 +34,12 @@ var control = (function() {
 
   function showAbbreviatedNote() {
     var node = document.createElement('div');
-    var textnode = document.createTextNode(_textOfLastNoteInList());
+    var textnode = document.createTextNode(noteList.textOfLastNoteInList());
+    node.addAttribute
     node.appendChild(textnode);
     document.body.appendChild(node)
   };
 
-  function _textOfLastNoteInList() {
-    return noteList.allNotes()[noteList.allNotes().length -1].previewText();
-  };
 
   return {
     init: init
