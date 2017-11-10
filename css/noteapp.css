@@ -1,28 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,500|Indie+Flower|Roboto:300,400');
 #title {
-  color: #008080;
+  color: #d4314b;
   text-align: center;
-  background-color: #FFD700;
-  padding: 15px 0px;
-  font-size: 20px;
+  font-family: 'Indie Flower', sans serif;
+  background-color: transparent
+  padding-top: 1px;
+  font-size: 30px;
 }
 
 #create-a-new-note {
   float: right;
-  font-family:monospace;
+  font-family: 'Roboto', sans serif;
   font-size: 45px;
   padding: 5px;
 }
 
-#write-a-note {
-  margin: 35px;
-  text-align: center;
-  padding: 15px;
-  display: block;
-  border-radius: 15px;
+#create-a-new-note {
+  background-image: url(http://www.freepngimg.com/thumb/pen/4-pen-in-hand-png-image-thumb.png);
+  background-color: transparent;
+  background-size: cover;
+  padding-top: 30px;
+  padding-left: 25px;
+  width: 200px;
+  height: 200px;
+  border: none;
+  outline: none;
+  float: right;
+  font-family: 'Indie Flower', sans serif;
+  font-size: 20px;
 }
 
 #save-note {
   float:none;
   font-family:monospace;
   margin-top: -60px;
+}
+
+#notes {
+  padding-left: 200px;
+  color: #d4314b;
+}
+
+li {
+  font-family: 'Indie Flower';
+  font-size: 24px;
+  padding-bottom: 2px;
+}
+
+body {
+  background-image: url(http://clipart-library.com/img1/901029.png)
 }
