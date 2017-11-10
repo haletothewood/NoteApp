@@ -15,6 +15,7 @@ var control = (function() {
   };
 
   function createEventListeners() {
+    console.log("You rang?")
     createANoteButton.addEventListener("click", function(){
       form.style.display = "block";
     });
@@ -33,13 +34,9 @@ var control = (function() {
   };
 
   function showAbbreviatedNote() {
-    var node = document.createElement('div');
-    var textnode = document.createTextNode(noteList.textOfLastNoteInList());
-    node.addAttribute
-    node.appendChild(textnode);
-    document.body.appendChild(node)
-  };
-
+    var ul = document.getElementById("notes")
+    ul.innerHTML = noteList.getAbbreviatedTextOfNotes()
+  }
 
   return {
     init: init

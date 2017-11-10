@@ -18,7 +18,7 @@
   NoteList.prototype.getAbbreviatedTextOfNotes = function() {
     var output = "";
     this.allNotes().map((note, index) => {
-      output+="<div id='" + index + "'>" + note.previewText() + "</div>";
+      output+='<li id="' + index + '">' + note.previewText() + '</li>';
     })
     return output;
   }
