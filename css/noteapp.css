@@ -22,7 +22,7 @@
   color: #d4314b;
   text-align: center;
   font-family: 'Indie Flower', sans serif;
-  background-color: transparent
+  background-color: transparent;
   padding-top: 1px;
   font-size: 30px;
 }
@@ -51,9 +51,7 @@
   opacity: 1;
 }
 
-#create-a-new-note:active {
-  opacity: 1;
-}
+
 
 #write-a-note {
   margin: 35px;
@@ -74,13 +72,25 @@
   color: #d4314b;
 }
 
-li {
+a {
   font-family: 'Indie Flower';
-  font-size: 24px;
-  padding-bottom: 2px;
+  font-size: 30px;
+  text-decoration:none;
+}
+
+a:link {
+  color: #d4314b;;
+}
+
+a:visited {
+  color: #535de9;
+}
+
+a:hover {
+  color: #d4314b;
 }
 
 body {
-  background-image: url(http://clipart-library.com/img1/901029.png);
+  background-image: url(https://cdn.wallpapersafari.com/59/85/VTSPaY.jpg);
   background-repeat: no-repeat;
 }

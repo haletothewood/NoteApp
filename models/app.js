@@ -16,7 +16,7 @@ var control = (function () {
   };
 
   function getNoteLinks() {
-    var items = document.getElementsByTagName("li");
+    var items = document.getElementsByTagName("a");
     var itemsArray = Array.prototype.slice.call(items);
 
     itemsArray.map((item, index) => {
@@ -29,18 +29,18 @@ var control = (function () {
 
   function addANewNote() {
     createANoteButton.addEventListener("click", function () {
+      textArea.value = "";
       form.style.display = "block";
     });
-
   }
 
   function getNoteText() {
     saveNote.addEventListener('click', function () {
       event.preventDefault();
       form.style.display = "none";
-      var text = document.getElementById("text-for-note").value;
+      var text = textArea.value;
       noteList.addNote(text);
-      document.getElementById("text-for-note").value = "";
+      text = "";
       showAbbreviatedNote();
     });
   };
