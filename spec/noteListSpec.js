@@ -23,7 +23,7 @@ aWholeNewWorld("Note List", function() {
       noteList.addNote(text);
       var text = "Here is another note that is long";
       noteList.addNote(text);
-      wish(noteList.getAbbreviatedTextOfNotes()).toEqual("<div id='0'>This is a note</div><div id='1'>Here is another note...</div>")
+      wish(noteList.getAbbreviatedTextOfNotes()).toEqual('<li id="0">This is a note</li><li id="1">Here is another note...</li>')
     })
   })
 
