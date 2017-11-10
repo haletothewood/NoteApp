@@ -1,5 +1,4 @@
 var noteList = new NoteList();
-console.log(noteList);
 
 
 var control = (function() {
@@ -15,7 +14,6 @@ var control = (function() {
   };
 
   function createEventListeners() {
-    console.log("You rang?")
     createANoteButton.addEventListener("click", function(){
       form.style.display = "block";
     });
